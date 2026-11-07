@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediBook+ · Prototipo Observer y State</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>MediBook+ <span>Prototipo de patrones: State y Observer</span></h1>
+    <p>Funcionalidad: <strong>cancelar una cita</strong>. State decide si se puede cancelar; Observer avisa al paciente y al médico.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="barra">
+        <label>Fecha y hora simulada (reloj de la Etapa 3)
+          <input type="datetime-local" id="reloj">
+        </label>
+        <button id="btnReiniciar" class="secundario">Reiniciar datos</button>
+      </div>
+      <h2>Citas</h2>
+      <table>
+        <thead><tr><th>Cita</th><th>Paciente</th><th>Médico</th><th>Fecha</th><th>Estado <small>(State)</small></th><th>Acciones</th></tr></thead>
+        <tbody id="tablaCitas"></tbody>
+      </table>
+      <div id="respuesta" class="respuesta" hidden></div>
+    </section>
+
+    <section class="columnas">
+      <div class="panel">
+        <h2>Avisos enviados <small>(Observer)</small></h2>
+        <p class="ayuda">Los mensajes que generan los suscriptores AvisoPaciente y AvisoMedico.</p>
+        <ul id="avisos" class="lista"></ul>
+      </div>
+      <div class="panel">
+        <h2>Historial de cambios <small>(Observer)</small></h2>
+        <p class="ayuda">Tercer suscriptor: registra todos los cambios de estado.</p>
+        <ul id="historial" class="lista"></ul>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
