@@ -11,6 +11,7 @@ Este prototipo programa **una sola funcionalidad de MediBook+: cancelar una cita
 
 En pocas palabras: **State decide si la cita se puede cancelar, y Observer avisa a los interesados cuando la cancelación ocurre.**
 
+
 ---
 
 ## 1. Cómo ejecutarlo
